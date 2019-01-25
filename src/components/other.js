@@ -6,9 +6,9 @@ import PlayLogo from '../assets/img/playbutton.png';
 import { Scrollbars } from 'react-custom-scrollbars';
 
 let items = [
-    {"CircleBanner": CircleBanner, "Tech" : ["Photoshop CC 2015", "Adobe After Effects", "Adobe Media Encoder"], "Desc" : "A Personal piece. Made with Cinema 4D + Octane and the high res landscape created in WorldCreator2 with Forester plugin being responsibile for the tree and grass. This project was moreso just a test with new technologies and plugins.", "Title" : "Loading Loop"},
-    {"LogoTree": LogoTree, "Tech" : ["Photoshop CC 2015", "Adobe After Effects", "Adobe Media Encoder"], "Desc" : "A Personal piece. Made with Cinema 4D + Octane and the high res landscape created in WorldCreator2 with Forester plugin being responsibile for the tree and grass. This project was moreso just a test with new technologies and plugins.", "Title" : "Tree Particles"},
-    {"SiteBanner": SiteBar, "Tech" : ["Photoshop CC 2015", "Adobe After Effects", "Adobe Media Encoder"], "Desc" : "A Personal piece. Made with Cinema 4D + Octane and the high res landscape created in WorldCreator2 with Forester plugin being responsibile for the tree and grass. This project was moreso just a test with new technologies and plugins.", "Title" : "Logo Loop"}
+    {"CircleBanner": CircleBanner, "Tech" : ["Photoshop CC 2015", "Adobe After Effects", "Adobe Media Encoder"], "Desc" : "Personal project created in Photoshop and Adobe After Effects", "Title" : "Loading Loop"},
+    {"LogoTree": LogoTree, "Tech" : ["Photoshop CC 2015", "Adobe After Effects", "Adobe Media Encoder"], "Desc" : "Personal project created in Photoshop and Adobe After Effects", "Title" : "Tree Particles"},
+    {"SiteBanner": SiteBar, "Tech" : ["Photoshop CC 2015", "Adobe After Effects", "Adobe Media Encoder"], "Desc" : "Personal project created in Photoshop and Adobe After Effects", "Title" : "Logo Loop"}
 ];
 
 class CgGraphics extends Component {
