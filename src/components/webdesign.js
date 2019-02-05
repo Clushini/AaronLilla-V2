@@ -6,6 +6,7 @@ import V1 from '../assets/img/dev/v1.png';
 import V2 from '../assets/img/dev/v2.png';
 import WiiPlay from '../assets/img/dev/wiiplaygames.png';
 import { Scrollbars } from 'react-custom-scrollbars';
+import tinygithub from '../assets/img/githublogo_tiny.png';
 
 let items = [
     {"Evergreen Organix": Evergreen, "Tech" : ["Wordpress", "Jquery", "Photoshop CC"], "Desc" : "This is a company I personally worked for as a Laboratory Technician and was responsible for our online presence as well. Backend uses Wordpress for content management as well as a semi-custom theme. Mainly a static content site with some API integration with stores in the Las Vegas area for stock and prices.", "Title" : "Evergreen Organix", "Repo": "", "Demo": "http://www.evergreenorganix.com"},
@@ -25,11 +26,16 @@ class CgGraphics extends Component {
         }
         
         this.handleClick = this.handleClick.bind(this);
+        this.handleButtonClick = this.handleButtonClick.bind(this);
     }
 
     handleClick(item, link, Tech, Desc, Title) {
         this.setState({active: item});
         this.props.activeitem(item, link, Tech, Desc, Title);
+    }
+
+    handleButtonClick(url) {
+        window.open(url);
     }
 
     componentWillMount() {
@@ -48,6 +54,10 @@ class CgGraphics extends Component {
                     for (var x in item) {
                         return <span key={x}>
                                <div className={(x === this.state.active) ? "ppreviewitem_active" : "ppreviewitem"} style={{backgroundImage: 'url(' + item[x] + ')', backgroundSize: 'cover', backgroundRepeat: "no-repeat", backgroundPosition: "center"}} onClick={() => this.handleClick(x, item[x], item.Tech, item.Desc, item.Title)}>
+                                    <div className="demowrap">
+                                        {(item.Repo) ? <div className="dembutton_active" onClick={() => this.handleButtonClick(item.Repo)}><img src={tinygithub} /></div> : <div className="dembutton_inactive"><img src={tinygithub} /></div>}
+                                        {(item.Demo) ? <div className="dembutton_active" onClick={() => this.handleButtonClick(item.Demo)}>Demo</div> : <div className="dembutton_inactive">Demo</div>}
+                                    </div>
                                     <div className="ppreviewitem_descript">
                                         <strong>Web Dev // </strong>{String(x)}
                                         
