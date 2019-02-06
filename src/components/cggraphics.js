@@ -33,11 +33,16 @@ class CgGraphics extends Component {
         }
         
         this.handleClick = this.handleClick.bind(this);
+        this.handleButtonClick = this.handleButtonClick.bind(this);
     }
 
     handleClick(item, link, Tech, Desc, Title) {
         this.setState({active: item});
         this.props.activeitem(item, link, Tech, Desc, Title);
+    }
+
+    handleButtonClick(url) {
+        window.open(url);
     }
 
     componentWillMount() {
@@ -55,9 +60,11 @@ class CgGraphics extends Component {
                     for (var x in item) {
                         return <span key={x}>
                                <div className={(x === this.state.active) ? "ppreviewitem_active" : "ppreviewitem"} style={{backgroundImage: 'url(' + item[x] + ')', backgroundSize: 'cover', backgroundRepeat: "no-repeat", backgroundPosition: "center"}} onClick={() => this.handleClick(x, item[x], item.Tech, item.Desc, item.Title)}>
+                                    <div className="demowrap">
+                                        <div className="dembutton_active" onClick={() => this.handleButtonClick(item[x])}>Fullscreen</div>
+                                    </div>
                                     <div className="ppreviewitem_descript">
                                         <strong>3D CG // </strong>{String(x)}
-                                        
                                     </div>
                                </div>
                                 {(x === this.state.active) ? <div className="ppreviewitem_mobilebox">
