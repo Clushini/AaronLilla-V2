@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './../App.css';
+import './../App.scss';
 import githublogo from './../assets/img/githublogo.png';
 import linkedin from './../assets/img/linicon2.png';
 import quoteicon from '../assets/img/quoteicon.png';

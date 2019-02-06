@@ -3,7 +3,7 @@ import About from './about';
 import Portfolio from './portfolio';
 import Resume from './resume';
 import Contact from './contact';
-import './../App.css';
+import './../App.scss';
 
 class Content extends Component {
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TopBar from './components/topbar';
 import BottomBar from './components/bottombar';
 import Content from './components/content';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   constructor(props) {
