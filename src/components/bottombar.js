@@ -23,8 +23,7 @@ class BottomBar extends Component {
                     <div className={"bblbutton bbl" + this.props.color} onClick={() => this.handleButtonClick("https://github.com/aaronjlilla")}><img src={linkedin} alt="" /></div>
                 </div>
                 <div className="botbar_right">
-                    <div><img src={quoteicon} alt=""/></div>
-                    <div>Custom Quote</div>
+                    <div className={"bblbutton bbl" + this.props.color}>Free Quote</div>
                 </div>
             </div>
         );
