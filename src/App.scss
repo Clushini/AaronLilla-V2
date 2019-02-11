@@ -135,12 +135,13 @@ video {
 
 .topbar_logo {
   margin-left: 15px;
-  margin-top: 8px;
+  margin-top: 12px;
   height: 100%;
   width: 237px;
   float: left;
   background-image: url('./assets/img/logo.png');
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .topbar_right {
