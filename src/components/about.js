@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Aboutskills from './about_skills';
+import Aboutsummary from './about_summary';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 class About extends Component {
     constructor(props) {
@@ -23,10 +26,15 @@ class About extends Component {
                 <div className="aboutwrap">
                     <div className="aboutwrap_left">
                         <div className="aboutbutton_wrap">
-                            <div className={(this.state.active === "Summary") ? "aboutbutton_active" : "aboutbutton" } onClick={() => this.handleClick("Summary")}>Summary</div>
-                            <div className={(this.state.active === "Skills") ? "aboutbutton_active" : "aboutbutton"} onClick={() => this.handleClick("Skills")}>Skills</div>
+                            <div className={(this.state.active === "Summary") ? "aboutbutton_active topleftradius" : "aboutbutton topleftradius" } onClick={() => this.handleClick("Summary")}>Summary</div>
+                            <div className={(this.state.active === "Skills") ? "aboutbutton_active toprightradius" : "aboutbutton toprightradius"} onClick={() => this.handleClick("Skills")}>Skills</div>
                         </div>
-                        awdawd
+                        <Scrollbars renderThumbVertical={props => < div {...props} className="thumb-vertical-green"/>} renderTrackVertical={props => < div {...props} className="track-vertical"/>} style={{ width: "100%", height: "calc(100% - 60px)" }}>
+                        <div className="aboutcontent">
+                            {(this.state.active === "Summary") && <Aboutsummary />}
+                            {(this.state.active === "Skills") && <Aboutskills />}
+                        </div>
+                        </Scrollbars>
                     </div>
                 </div>
             </div>
