@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
+let data = require('./data.json');
+
 class Aboutsummary extends Component {
     
     render() {
         return(
             <div>
-                about summary
+                {data.About.Summary}
             </div>
         );
     }

@@ -30,7 +30,23 @@
         ]
     },
     "About" : {
-        "Summary" : "",
-        "Skills" : ""
+        "Summary" : "Summary",
+        "Skills" : {
+            "Items" : [
+                {"Image" : "/img/skills/html.png", "Name" : "HTML5", "PCT" : 95},
+                {"Image" : "/img/skills/css.png", "Name" : "CSS", "PCT" : 90},
+                {"Image" : "/img/skills/js.png", "Name" : "JavaScript", "PCT" : 90},
+                {"Image" : "/img/skills/sass.png", "Name" : "SASS", "PCT" : 80},
+                {"Image" : "/img/skills/jquery.png", "Name" : "jQuery", "PCT" : 70},
+                {"Image" : "/img/skills/node.png", "Name" : "NodeJS", "PCT" : 80},
+                {"Image" : "/img/skills/react.png", "Name" : "ReactJS", "PCT" : 80},
+                {"Image" : "/img/skills/redux.png", "Name" : "Redux", "PCT" : 70},
+                {"Image" : "/img/skills/mysql.png", "Name" : "MySQL", "PCT" : 70},
+                {"Image" : "/img/skills/php.png", "Name" : "PHP", "PCT" : 50},
+                {"Image" : "/img/skills/aftereffects.png", "Name" : "After Effects", "PCT" : 60},
+                {"Image" : "/img/skills/photoshop.png", "Name" : "Photoshop", "PCT" : 95},
+                {"Image" : "/img/skills/mongo.png", "Name" : "MongoDB", "PCT" : 70}
+            ]
+        }
     }
 }
