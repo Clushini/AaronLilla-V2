@@ -26,6 +26,7 @@ class Aboutskills extends Component {
                         </div>
                     </div>
                 })}
+                <div className="paddingfix2"></div>
             </div>
             </Scrollbars>
         );

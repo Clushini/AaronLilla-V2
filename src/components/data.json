@@ -32,7 +32,9 @@
     "About" : {
         "Summary" : {
             "Data" : "Summary",
-            "Face" : "/img/face.png"
+            "Face" : "/img/face.png",
+            "Descat" : ["UI DESIGN", "UX STRATEGY", "App Design", "Logo and Graphics"],
+            "Devcat" : ["Full Stack", "ReactJS", "API Integration"]
         },
         "Skills" : {
             "Items" : [

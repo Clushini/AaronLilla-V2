@@ -693,7 +693,7 @@ video {
 }
 
 .contact {
-  width: 55%;
+  width: 75%;
   height: 100%;
   margin: auto;
   padding-top: 20px;
@@ -707,7 +707,6 @@ video {
     padding: 10px 10px 10px 10px;
     border-radius: 4px;
     @include boxshadow(0px, 2px, 10px, -2px, 1, 0, 0, 0);
-    border: 2px solid rgba(132,191,186,.9);
   }
 }
 
@@ -1052,16 +1051,20 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .summaryleft {
-  width: calc(100% - 303px);
+  width: calc(100% - 303px - 30px - 30px);
   float: left;
+  padding: 30px 30px 30px 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: justify;
 }
 
 .summaryright {
   width: 300px;
-  height: calc(100% - 53px);
+  height: 100%;
   float: right;
-  background-image: url('./assets/img/fullpic.png');
-  background-color: rgba(10, 10, 10, .5);
 }
 
 .summarypic {
@@ -1086,6 +1089,42 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: -20px;
     font-size: 18px;
   }
+}
+
+.summaryrightinfowrap {
+  width: calc(100% - 25px - 25px);
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 30px;
+}
+
+.summaryrightsub {
+  font-family: $font;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 30px;
+}
+
+.summaryrightbigtitle {
+  color: rgba(220,249,132,1);
+  font-size: 28px;
+  font-family: $font;
+  width: 100%;
+  font-weight: bold;
+}
+
+.summaryhead {
+  font-size: 80px;
+  color: rgba(220,249,132,1);
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+.paddingfix2 {
+  width: 100%;
+  height: 50px;
 }
 
 div {
