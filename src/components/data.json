@@ -30,7 +30,10 @@
         ]
     },
     "About" : {
-        "Summary" : "Summary",
+        "Summary" : {
+            "Data" : "Summary",
+            "Face" : "/img/face.png"
+        },
         "Skills" : {
             "Items" : [
                 {"Image" : "/img/skills/html.png", "Name" : "HTML5", "PCT" : 95},

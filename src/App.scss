@@ -27,6 +27,12 @@ body, html {
 
 $font: ajkthx;
 
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
 @mixin easeinout($sec) {
   -webkit-transition: all $sec ease-in-out;
   -moz-transition: all $sec ease-in-out;
@@ -696,6 +702,13 @@ video {
 
 .contact_title_text {
   font-size: 18px;
+  span {
+    background: rgba(25, 25, 25, .8);
+    padding: 10px 10px 10px 10px;
+    border-radius: 4px;
+    @include boxshadow(0px, 2px, 10px, -2px, 1, 0, 0, 0);
+    border: 2px solid rgba(132,191,186,.9);
+  }
 }
 
 .contact_title {
@@ -949,8 +962,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .aboutcontent {
-  width: calc(100% - 10px - 10px);
-  padding: 10px 10px 10px 10px;
+  width: calc(100%);
+  height: 100%;
 }
 
 .topleftradius {
@@ -963,12 +976,13 @@ input[type=number]::-webkit-outer-spin-button {
 
 .skillsitemwrap {
   height: 120px;
-  width: calc(100% - 20px - 20px);
+  width: calc(100% - 30px - 30px);
   margin-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 20px;
   border-top: 1px solid rgba(20,20,20,.5);
+  margin-left: 10px;
 }
 
 .skillsitempic {
@@ -1031,6 +1045,47 @@ input[type=number]::-webkit-outer-spin-button {
   width: 100%;
   text-align: center;
   padding-top: 10px;
+}
+
+.summarywrap {
+  height: 100%;
+}
+
+.summaryleft {
+  width: calc(100% - 303px);
+  float: left;
+}
+
+.summaryright {
+  width: 300px;
+  height: calc(100% - 53px);
+  float: right;
+  background-image: url('./assets/img/fullpic.png');
+  background-color: rgba(10, 10, 10, .5);
+}
+
+.summarypic {
+  width: calc(100% - 25px);
+  padding-left: 25px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  img {
+    width: 250px;
+    border-radius: 50%;
+    @include boxshadow(0px, 2px, 10px, -2px, 1, 0, 0, 0);
+  }
+}
+
+.summaryrighttitle {
+  width: 100%;
+  text-align: center;
+  font-family: $font;
+  font-size: 41px;
+  line-height: 24px;
+  span {
+    margin-top: -20px;
+    font-size: 18px;
+  }
 }
 
 div {
@@ -1107,37 +1162,6 @@ div {
             transform: translateZ(0);
     opacity: 1;
   }
-}
-
-
-
-@keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
 }
 
 @media only screen and (max-width: 800px) {

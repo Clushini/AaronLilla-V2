@@ -29,12 +29,10 @@ class About extends Component {
                             <div className={(this.state.active === "Summary") ? "aboutbutton_active topleftradius" : "aboutbutton topleftradius" } onClick={() => this.handleClick("Summary")}>Summary</div>
                             <div className={(this.state.active === "Skills") ? "aboutbutton_active toprightradius" : "aboutbutton toprightradius"} onClick={() => this.handleClick("Skills")}>Skills</div>
                         </div>
-                        <Scrollbars renderThumbVertical={props => < div {...props} className="thumb-vertical-green"/>} renderTrackVertical={props => < div {...props} className="track-vertical"/>} style={{ width: "100%", height: "calc(100% - 60px)" }}>
                         <div className="aboutcontent">
                             {(this.state.active === "Summary") && <Aboutsummary />}
                             {(this.state.active === "Skills") && <Aboutskills />}
                         </div>
-                        </Scrollbars>
                     </div>
                 </div>
             </div>

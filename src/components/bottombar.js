@@ -20,7 +20,7 @@ class BottomBar extends Component {
             <div id="frosthandle_bot" className={"bottombar bordertop_" + this.props.color}>
                 <div className="botbar_left">
                     <div className={"bblbutton bbl" + this.props.color} onClick={() => this.handleButtonClick("https://github.com/aaronjlilla")}><img src={githublogo} alt="" /></div>
-                    <div className={"bblbutton bbl" + this.props.color} onClick={() => this.handleButtonClick("https://github.com/aaronjlilla")}><img src={linkedin} alt="" /></div>
+                    <div className={"bblbutton bbl" + this.props.color} onClick={() => this.handleButtonClick("https://www.linkedin.com/in/aaronlilla/")}><img src={linkedin} alt="" /></div>
                 </div>
                 <div className="botbar_right">
                     <div className={"bblbutton bbl" + this.props.color}>Free Quote</div>

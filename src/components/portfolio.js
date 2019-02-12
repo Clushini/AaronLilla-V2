@@ -23,6 +23,7 @@ class Portfolio extends Component {
         this.handleClick = this.handleClick.bind(this);
         this.handleResize = this.handleResize.bind(this);
         this.handlePitem = this.handlePitem.bind(this);
+        this.handleFullscreen = this.handleFullscreen.bind(this);
     }
 
     handleClick(page) {
@@ -48,6 +49,10 @@ class Portfolio extends Component {
 
     handlePitem(page, link, Tech, Desc, Title) {
        this.setState({activeitem: page, activelink: link, activetech: Tech, activedesc: Desc, activetitle: Title});
+    }
+
+    handleFullscreen(url) {
+        window.open(url);
     }
 
     componentDidMount() {
@@ -85,7 +90,7 @@ class Portfolio extends Component {
                     <div className="pitem">
                     <Scrollbars renderThumbVertical={props => < div {...props} className="thumb-vertical"/>} renderTrackVertical={props => < div {...props} className="track-vertical"/>} style={{ width: "100%", height: "100%" }}>
                         {
-                            (this.state.activelink.split('.').pop() === "mp4") ? <video width="100%" height="auto" key={this.state.activelink} muted autoPlay loop><source src={this.state.activelink} type="video/mp4"/></video> : <img src={this.state.activelink} alt=""/> 
+                            (this.state.activelink.split('.').pop() === "mp4") ? <video width="100%" height="auto" key={this.state.activelink} muted autoPlay loop><source src={this.state.activelink} type="video/mp4"/></video> : <img src={this.state.activelink} alt="" onClick={() => this.handleFullscreen(this.state.activelink)}/> 
                         }
                         <div className="pitem_tech">
                             {

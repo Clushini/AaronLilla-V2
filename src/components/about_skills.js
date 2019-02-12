@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 let data = require('./data.json');
 
@@ -6,6 +7,7 @@ class Aboutskills extends Component {
     
     render() {
         return(
+            <Scrollbars renderThumbVertical={props => < div {...props} className="thumb-vertical-green"/>} renderTrackVertical={props => < div {...props} className="track-vertical"/>} style={{ width: "100%", height: "calc(100% - 54px)" }}>
             <div>
                 <div className="skillsdescriptor">
                     Below is an estimate of my proficiency in these skills
@@ -25,6 +27,7 @@ class Aboutskills extends Component {
                     </div>
                 })}
             </div>
+            </Scrollbars>
         );
     }
 }
