@@ -19,7 +19,7 @@ class Contact extends Component {
         let phone = document.getElementById("phone").value;
         let message = document.getElementById("message").value;
         if (firstname && lastname && email && message) {
-            fetch('http://localhost:3001/mail', {
+            fetch('http://aaronlilla.com:3001/mail', {
                 method: 'post',
                 body: JSON.stringify({
                     "firstname": firstname,
