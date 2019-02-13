@@ -60,6 +60,7 @@ class Contact extends Component {
                         </div> 
                     : <div className="submitted">Thank you, your inquiry has been submitted.</div>
                 }
+                <div className="paddingfix2"></div>
             </div>
             </Scrollbars>
         );

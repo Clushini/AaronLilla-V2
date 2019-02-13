@@ -13,7 +13,7 @@ class Aboutskills extends Component {
                     Below is an estimate of my proficiency in these skills
                 </div>
                 {data.About.Skills.Items.map(item => {
-                    return <div className="skillsitemwrap">
+                    return <div className="skillsitemwrap" key={item.Name}>
                         <div className="skillsitempic"><img src={item.Image} alt=""/></div>
                         <div className="skillsitemright">
                             <div className="skillsitemrighttop">

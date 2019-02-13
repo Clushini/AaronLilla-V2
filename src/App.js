@@ -12,11 +12,13 @@ class App extends Component {
       background: "background1",
       transition: false,
       page: "Portfolio",
-      color: "red"
+      color: "red",
+      freequote: false
     }
 
     this.myRef = React.createRef();
     this.handleBackground = this.handleBackground.bind(this);
+    this.quoteOpen = this.quoteOpen.bind(this);
   }
 
   componentDidUpdate() {
@@ -26,6 +28,10 @@ class App extends Component {
         item.className = `wrap ${this.state.background}`;
       }
     }
+  }
+
+  quoteOpen() {
+    this.setState({freequote: !this.state.freequote});
   }
 
   handleBackground(page) {
@@ -52,6 +58,7 @@ class App extends Component {
     return (
         <frosted-glass-container class="height">
           <div className={"App " + "cursor_" + this.state.color}>
+            {this.state.freequote && <div className="quotewrap">awdawd</div>}
             <frosted-glass blur-amount="3px" overlay-color="#00000010" class="topbar">
                 <TopBar lastpage={this.test} activepage={this.handleBackground}/>
             </frosted-glass>
@@ -61,7 +68,7 @@ class App extends Component {
               </div>
             </div>
             <frosted-glass blur-amount="3px" overlay-color="#00000010" class="bottombar">
-                <BottomBar backclick={this.handleBackClick} lastpage={this.test} background={this.state.background} color={this.state.color}/>
+                <BottomBar backclick={this.handleBackClick} lastpage={this.test} background={this.state.background} color={this.state.color} quoteClicked={this.quoteOpen}/>
             </frosted-glass>
           </div>
         </frosted-glass-container>
