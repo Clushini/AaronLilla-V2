@@ -18,7 +18,6 @@ class App extends Component {
 
     this.myRef = React.createRef();
     this.handleBackground = this.handleBackground.bind(this);
-    this.quoteOpen = this.quoteOpen.bind(this);
   }
 
   componentDidUpdate() {
@@ -28,10 +27,6 @@ class App extends Component {
         item.className = `wrap ${this.state.background}`;
       }
     }
-  }
-
-  quoteOpen() {
-    this.setState({freequote: !this.state.freequote});
   }
 
   handleBackground(page) {
@@ -68,7 +63,7 @@ class App extends Component {
               </div>
             </div>
             <frosted-glass blur-amount="3px" overlay-color="#00000010" class="bottombar">
-                <BottomBar backclick={this.handleBackClick} lastpage={this.test} background={this.state.background} color={this.state.color} quoteClicked={this.quoteOpen}/>
+                <BottomBar backclick={this.handleBackClick} lastpage={this.test} background={this.state.background} color={this.state.color}/>
             </frosted-glass>
           </div>
         </frosted-glass-container>
