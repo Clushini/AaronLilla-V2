@@ -27,7 +27,7 @@ class About extends Component {
                     <div className="aboutwrap_left">
                     <Acrylic
                     colorOverlay='#000'
-                    opacity='0.6'
+                    opacity='0.1'
             
                     position='fixed'
                     top='0px'
@@ -35,9 +35,9 @@ class About extends Component {
                     width='100%'
                     height="100%"
             
-                    blur={10}
-                    borderRadius='1px'
-                    borderRadius='1px'
+                    blur={5}
+                    borderRadius='16px'
+                    borderRadius='16px'
                     >
                         <div className="aboutbutton_wrap">
                             <div className={(this.state.active === "Summary") ? "aboutbutton_active topleftradius" : "aboutbutton topleftradius" } onClick={() => this.handleClick("Summary")}>Summary</div>
