@@ -693,6 +693,8 @@ video {
   display: none;
   width: 100%;
   height: auto !important;
+  background: rgba(20, 20, 20, .9);
+  border-radius: 16px;
   @include easeinout(.2s);
 }
 
