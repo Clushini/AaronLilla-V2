@@ -5,6 +5,7 @@ import Graphics from './graphics';
 import CgGraphics from './cggraphics';
 import Other from './other';
 import { Scrollbars } from 'react-custom-scrollbars';
+import Acrylic from 'react-acrylic';
 
 class Portfolio extends Component {
     constructor(props) {
@@ -88,6 +89,20 @@ class Portfolio extends Component {
                         {(this.state.active === "3D CG") && <CgGraphics width={this.state.width} activeitem={this.handlePitem} current={this.state.activeitem} category={this.state.active}/>}
                         {(this.state.active === "Other") && <Other width={this.state.width} activeitem={this.handlePitem} current={this.state.activeitem} category={this.state.active}/>}
                     <div className="pitem">
+                    <Acrylic
+                    colorOverlay='#000'
+                    opacity='0.5'
+            
+                    position='fixed'
+                    top='0px'
+                    left='0px'
+                    width='100%'
+                    height="100%"
+            
+                    blur={50}
+                    borderRadius='1px'
+                    borderRadius='1px'
+                    >
                     <Scrollbars renderThumbVertical={props => < div {...props} className="thumb-vertical"/>} renderTrackVertical={props => < div {...props} className="track-vertical"/>} style={{ width: "100%", height: "100%" }}>
                         {
                             (this.state.activelink.split('.').pop() === "mp4") ? <video width="100%" height="auto" key={this.state.activelink} muted autoPlay loop><source src={this.state.activelink} type="video/mp4"/></video> : <img src={this.state.activelink} alt="" onClick={() => this.handleFullscreen(this.state.activelink)}/> 
@@ -104,6 +119,7 @@ class Portfolio extends Component {
                             {this.state.activedesc}
                         </div>
                     </Scrollbars>
+                    </Acrylic>
                     </div>
                 </div>
             </div>

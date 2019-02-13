@@ -5,6 +5,7 @@
   "dependencies": {
     "node-sass": "^4.11.0",
     "react": "^16.6.3",
+    "react-acrylic": "^0.1.1",
     "react-custom-scroll": "^4.0.1",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.6.3",

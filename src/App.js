@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TopBar from './components/topbar';
 import BottomBar from './components/bottombar';
 import Content from './components/content';
+import Acrylic from 'react-acrylic';
 import './App.scss';
 
 class App extends Component {
@@ -13,7 +14,8 @@ class App extends Component {
       transition: false,
       page: "Portfolio",
       color: "red",
-      freequote: false
+      freequote: false,
+      size: 70
     }
 
     this.myRef = React.createRef();
@@ -46,27 +48,36 @@ class App extends Component {
       default:
       break;
     }
-    
+    this.setState({size: this.state.size + 1});
   }
 
   render() {
     return (
-        <frosted-glass-container class="height">
           <div className={"App " + "cursor_" + this.state.color}>
             {this.state.freequote && <div className="quotewrap">awdawd</div>}
-            <frosted-glass blur-amount="3px" overlay-color="#00000010" class="topbar">
-                <TopBar lastpage={this.test} activepage={this.handleBackground}/>
-            </frosted-glass>
+            <Acrylic
+              colorOverlay='#555'
+              opacity='0.9'
+        
+              position='fixed'
+              top='0px'
+              left='0px'
+              width='100%'
+              height="70px"
+        
+              blur={70}
+              borderRadius='2px'
+              borderRadius='2px'
+            >
+              <TopBar lastpage={this.test} activepage={this.handleBackground} size={this.state.size}/>
+            </Acrylic>
             <div id="frosthandle" className={`wrap ${this.state.background}`} ref={this.myRef}>
               <div className="content">
               <Content page={this.state.page}/>
               </div>
             </div>
-            <frosted-glass blur-amount="3px" overlay-color="#00000010" class="bottombar">
-                <BottomBar backclick={this.handleBackClick} lastpage={this.test} background={this.state.background} color={this.state.color}/>
-            </frosted-glass>
+              <BottomBar backclick={this.handleBackClick} lastpage={this.test} background={this.state.background} color={this.state.color}/>
           </div>
-        </frosted-glass-container>
     );
   }
 }
