@@ -22,6 +22,12 @@ class App extends Component {
     this.handleBackground = this.handleBackground.bind(this);
   }
 
+  async componentDidMount() {
+    const response = await fetch('https://api.github.com');
+    const json = await response.json();
+    console.log(json.current_user_url);
+  }
+
   componentDidUpdate() {
     let list = document.getElementsByClassName("wrap");
     for (let item of list) {
