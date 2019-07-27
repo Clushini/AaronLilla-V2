@@ -43,7 +43,7 @@ class Contact extends Component {
             <div className="contact">
                 <div className="contact_title">
                     <div>Contact Me</div>
-                    <div className="contact_title_text"><span><a>+1 (702) 630-6976 -</a> <a href="mailto:aaronjlilla@gmail.com">AaronJLilla@gmail.com</a></span></div>
+                    <div className="contact_title_text"><span><a>+1 (702) 964-5163 -</a> <a href="mailto:aaronjlilla@gmail.com">AaronJLilla@gmail.com</a></span></div>
                     {this.state.error && <div className="errormsg"><strong>ERROR:</strong> You must include at least First Name, Last Name, E-Mail, and Message</div>}
                 </div>
                 {

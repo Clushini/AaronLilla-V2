@@ -9,7 +9,7 @@ class CgGraphics extends Component {
         super(props);
 
         this.state = {
-            active: Object.keys(data.Portfolio.DEV[1])[0]
+            active: Object.keys(data.Portfolio.DEV[0])[0]
         }
         
         this.handleClick = this.handleClick.bind(this);
@@ -27,7 +27,7 @@ class CgGraphics extends Component {
 
     componentWillMount() {
         if (!this.props.current) {
-            this.props.activeitem(Object.keys(data.Portfolio.DEV[1])[0], data.Portfolio.DEV[1].Synthesis, data.Portfolio.DEV[1].Tech, data.Portfolio.DEV[1].Desc, data.Portfolio.DEV[1].Title);
+            this.props.activeitem(Object.keys(data.Portfolio.DEV[1])[0], data.Portfolio.DEV[0]["USCRE.com Real Estate Search"], data.Portfolio.DEV[1].Tech, data.Portfolio.DEV[1].Desc, data.Portfolio.DEV[1].Title);
         }
     }
 

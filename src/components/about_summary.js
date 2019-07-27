@@ -33,7 +33,7 @@ class Aboutsummary extends Component {
                     </div>
                     <div className="summaryleft">
                         <div className="summaryhead">About Me</div>
-                        I'm a web designer & full stack developer from Las Vegas, Nevada with over 6 years design experience and 2 years development experience. I excell and focus in front end user interfaces but also have a growing interest in backend technologies. 
+                        I'm a web designer & full stack developer from Las Vegas, Nevada with over 7 years design experience and 3 years development experience. I excell and focus in front end user interfaces but also have a growing interest in backend technologies. 
                         Over the past few years I have had some incredible opportunities to work with some amazing brands and have always pushed out of my comfort zone to provide an above-and-beyond product while learning new skills.<br /><br />
                         As a Front-end developer, I believe it is important to understand both design and development to achieve a successful user-facing product. I can assist with producing clean and functional design where required.
                         I pride myself on having a large range of skills, and am able to design something in Photoshop and take it all the way to a fully functioning product completely by myself. <br /><br />

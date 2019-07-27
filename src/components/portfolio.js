@@ -12,7 +12,7 @@ class Portfolio extends Component {
         super(props);
 
         this.state = {
-            active: "3D CG",
+            active: "Web Dev",
             activeitem: "",
             activelink: "",
             activetech: [],
